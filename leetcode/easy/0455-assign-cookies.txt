@@ -1,0 +1,23 @@
+// ===================================================
+// Problem  : Assign Cookies
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/assign-cookies/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 19 ms
+// Memory   : 21.8 MB
+// Date     : March 11, 2026
+// ===================================================class Solution:
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:
+        n= len(g)
+        m = len(s)
+        l=0
+        t = 0
+        g.sort()
+        s.sort()
+        while l< m and t < n :
+            if g[t] <= s[l]  :
+                t=t+1
+            l=l+1
+        return t
+        
