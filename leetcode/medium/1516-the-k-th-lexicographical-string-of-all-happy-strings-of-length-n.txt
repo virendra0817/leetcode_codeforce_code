@@ -1,0 +1,32 @@
+// ===================================================
+// Problem  : The k-th Lexicographical String of All Happy Strings of Length n
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 48 ms
+// Memory   : 29.8 MB
+// Date     : March 14, 2026
+// ===================================================class Solution:
+    
+        def getHappyString(self, n: int, k: int) -> str:
+            res = []
+        
+            def backtrack(path):
+               if len(path) == n:
+                  res.append(path)
+                  return
+            
+               for ch in ['a','b','c']:
+                 if not path or path[-1] != ch:
+                     backtrack(path + ch)
+        
+            backtrack("")
+        
+            if k > len(res):
+              return ""
+        
+            return res[k-1]
+
+
+        
