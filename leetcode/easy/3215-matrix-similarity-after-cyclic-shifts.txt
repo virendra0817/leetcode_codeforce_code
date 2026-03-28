@@ -1,0 +1,29 @@
+// ===================================================
+// Problem  : Matrix Similarity After Cyclic Shifts
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.1 MB
+// Date     : March 28, 2026
+// ===================================================class Solution:
+    def areSimilar(self, mat: List[List[int]], k: int) -> bool:
+        '''grid= mat
+        k=k%len(mat)
+        for  i in range(len(mat)):
+          if  i%2 == 0 :
+            
+            grid[i] = grid[i][k:] + grid[i][:k]
+            if grid[i] == mat [i] :
+                return True
+            else : return False
+          else :
+            
+            grid[i] = grid[i][-k:] + grid[i][:-k]
+            if grid[i] == mat[i]:
+                return True 
+            else : 
+                return False 
+          '''
+        return [r[k%len(r):] + r[:k%len(r)] for r in mat] == mat
