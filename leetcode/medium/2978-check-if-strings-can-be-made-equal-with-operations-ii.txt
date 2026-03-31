@@ -1,0 +1,17 @@
+// ===================================================
+// Problem  : Check if Strings Can be Made Equal With Operations II
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 84 ms
+// Memory   : 20.8 MB
+// Date     : March 31, 2026
+// ===================================================class Solution:
+    def checkStrings(self, s1: str, s2: str) -> bool:
+         return (
+        sorted(s1[::2]) == sorted(s2[::2]) and
+        sorted(s1[1::2]) == sorted(s2[1::2])
+    )
+    
+            
