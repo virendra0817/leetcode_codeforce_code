@@ -1,0 +1,22 @@
+// ===================================================
+// Problem  : Robot Return to Origin
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/robot-return-to-origin/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.2 MB
+// Date     : April 9, 2026
+// ===================================================class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+         # if  moves.count("R") == moves.count("L"):
+            
+           # return True
+       # elif moves.count("D") == moves.count("U"):
+           # return True
+
+        if moves.count("R") == moves.count("L") and moves.count("D") == moves.count("U"):
+            return True
+        else :
+            return False
+        
