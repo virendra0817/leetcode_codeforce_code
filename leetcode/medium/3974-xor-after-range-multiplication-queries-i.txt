@@ -1,0 +1,29 @@
+// ===================================================
+// Problem  : XOR After Range Multiplication Queries I
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/xor-after-range-multiplication-queries-i/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 1600 ms
+// Memory   : 20 MB
+// Date     : April 9, 2026
+// ===================================================class Solution:
+    def xorAfterQueries(self, nums: List[int], queries: List[List[int]]) -> int:
+        MOD = 10**9 + 7
+
+        for j in range(len(queries)):
+           l = queries[j][0]
+           r = queries[j][1]
+           k = queries[j][2]
+           v= queries[j][3]
+
+           for idx in range(l, r + 1, k):
+                nums[idx] = (nums[idx] * v) % MOD
+
+           
+        g = 0
+
+        for i in range( len(nums)):
+            g = g ^ nums[i]
+
+        return g
