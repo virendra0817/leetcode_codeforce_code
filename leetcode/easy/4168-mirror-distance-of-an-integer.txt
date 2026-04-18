@@ -1,0 +1,15 @@
+// ===================================================
+// Problem  : Mirror Distance of an Integer
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/mirror-distance-of-an-integer/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.3 MB
+// Date     : April 18, 2026
+// ===================================================class Solution:
+    def mirrorDistance(self, n: int) -> int:
+       t= str(n)
+       s=t[::-1] 
+       p=int(s)
+       return abs(n-p)
