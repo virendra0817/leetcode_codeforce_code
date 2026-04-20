@@ -1,0 +1,18 @@
+// ===================================================
+// Problem  : Two Furthest Houses With Different Colors
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/two-furthest-houses-with-different-colors/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.2 MB
+// Date     : April 21, 2026
+// ===================================================class Solution:
+    def maxDistance(self, colors: List[int]) -> int:
+        n=len(colors)
+        c0, cN=colors[0], colors[-1]
+        lMax, rMax=0, 0
+        for i, c in enumerate(colors):
+            if c0!=c: lMax=max(lMax, i)
+            if cN!=c: rMax=max(rMax, n-1-i)
+        return max(lMax, rMax)
