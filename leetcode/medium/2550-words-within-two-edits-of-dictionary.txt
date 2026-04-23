@@ -1,0 +1,27 @@
+// ===================================================
+// Problem  : Words Within Two Edits of Dictionary
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/words-within-two-edits-of-dictionary/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 11 ms
+// Memory   : 19.2 MB
+// Date     : April 23, 2026
+// ===================================================class Solution:
+    def twoEditWords(self, queries: List[str], dictionary: List[str]) -> List[str]:
+        def gedis(s1,s2):
+            c=0
+            for i in range(len(s1)):
+                if s1[i]!=s2[i]:
+                    c=c+1
+                if c ==3 :
+                    return False
+            return True
+        a=[]
+        for query in queries:
+            for d in dictionary:
+                dis = gedis(query , d)
+                if dis:
+                    a.append(query)
+                    break
+        return a
