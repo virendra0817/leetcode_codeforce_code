@@ -1,0 +1,16 @@
+// ===================================================
+// Problem  : Furthest Point From Origin
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/furthest-point-from-origin/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 3 ms
+// Memory   : 19.3 MB
+// Date     : April 24, 2026
+// ===================================================class Solution:
+    def furthestDistanceFromOrigin(self, moves: str) -> int:
+       x,c=0,0
+       for i in moves:
+        x+=(i=='R')-(i=='L')
+        c+=i== '_'
+       return abs(x)+c
