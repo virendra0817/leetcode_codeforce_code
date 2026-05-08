@@ -1,0 +1,19 @@
+// ===================================================
+// Problem  : Missing Number
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/missing-number/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 1333 ms
+// Memory   : 20.2 MB
+// Date     : May 8, 2026
+// ===================================================class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        n=len(nums)
+        for i in range(len(nums)+1):
+            if i not in nums:
+                return i
+
+
+                    
