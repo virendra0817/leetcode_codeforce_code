@@ -1,0 +1,20 @@
+// ===================================================
+// Problem  : Separate the Digits in an Array
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/separate-the-digits-in-an-array/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 7 ms
+// Memory   : 19.4 MB
+// Date     : May 11, 2026
+// ===================================================class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        a=[]
+        for i in range (len(nums)):
+            j = str(nums[i])
+            a.extend(int(x) for  x  in j )
+        return a 
+            
+
+
+                        
