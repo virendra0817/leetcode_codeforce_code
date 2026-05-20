@@ -1,0 +1,26 @@
+// ===================================================
+// Problem  : Majority Element
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/majority-element/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 7 ms
+// Memory   : 21.2 MB
+// Date     : May 20, 2026
+// ===================================================class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        a = set()
+        a1=0
+        n=0
+        for i in range(len(nums)):
+            a.add(nums[i])
+        for i in a :
+            if nums.count(i) > n:
+                n = nums.count(i)
+                a1 = i
+        return a1
+
+
+
+
+        
