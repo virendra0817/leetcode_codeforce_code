@@ -1,0 +1,19 @@
+// ===================================================
+// Problem  : Two Sum
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/two-sum/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 1 ms
+// Memory   : 20.3 MB
+// Date     : May 20, 2026
+// ===================================================class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+       nummap = {}
+       n= len(nums)
+       for i in range(n):
+         comp = target - nums[i]
+         if comp in nummap:
+            return [nummap[comp],i]
+         nummap[nums[i]] =i
+       return []  
