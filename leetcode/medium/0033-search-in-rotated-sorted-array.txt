@@ -1,0 +1,16 @@
+// ===================================================
+// Problem  : Search in Rotated Sorted Array
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/search-in-rotated-sorted-array/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.5 MB
+// Date     : May 22, 2026
+// ===================================================class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        e=0
+        for i in range(len(nums)):
+            if nums[i]  == target :
+                 return i 
+        return -1
