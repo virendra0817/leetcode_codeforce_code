@@ -1,0 +1,19 @@
+// ===================================================
+// Problem  : Reverse Words in a String
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/reverse-words-in-a-string/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 3 ms
+// Memory   : 19.3 MB
+// Date     : May 24, 2026
+// ===================================================class Solution:
+    def reverseWords(self, s: str) -> str:
+        words = s.split()
+        res = []
+
+        for i in range(len(words) - 1, -1, -1):
+            res.append(words[i])
+            if i != 0:
+                res.append(" ")
+        return "".join(res)
