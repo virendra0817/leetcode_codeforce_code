@@ -1,0 +1,22 @@
+// ===================================================
+// Problem  : Valid Palindrome
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/valid-palindrome/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 8 ms
+// Memory   : 20.6 MB
+// Date     : May 23, 2026
+// ===================================================class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        a= s.lower()
+        a= list(a)
+        d=""
+        for i in a : 
+            if  i.isalnum() :
+                d = d + i
+
+        s1= d[::-1]
+        if s1 == d :
+            return True 
+        return False
