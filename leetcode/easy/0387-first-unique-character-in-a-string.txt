@@ -1,0 +1,20 @@
+// ===================================================
+// Problem  : First Unique Character in a String
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/first-unique-character-in-a-string/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 74 ms
+// Memory   : 20.2 MB
+// Date     : May 24, 2026
+// ===================================================class Solution:
+    def firstUniqChar(self, s: str) -> int:
+       d={}
+       for i in s:
+          d[i] = d.get(i,0)+1
+       s1=list(s) 
+       #return s1
+       for j in range(len(s1)):
+         if d[s1[j]] == 1:
+            return j
+       return -1
