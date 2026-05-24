@@ -1,0 +1,23 @@
+// ===================================================
+// Problem  : Valid Anagram
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/valid-anagram/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 4 ms
+// Memory   : 19.4 MB
+// Date     : May 24, 2026
+// ===================================================class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        s1=set()
+        for i in s :
+            s1.add(i)
+        
+        for i in s1 :
+            if t.count(i) != s.count(i):
+                return False
+        
+        return True
+             
