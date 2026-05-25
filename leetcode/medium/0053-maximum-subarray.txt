@@ -4,8 +4,8 @@
 // Link     : https://leetcode.com/problems/maximum-subarray/
 // Difficulty: Medium
 // Language : python3
-// Runtime  : 41 ms
-// Memory   : 31.3 MB
+// Runtime  : 37 ms
+// Memory   : 31.4 MB
 // Date     : May 25, 2026
 // ===================================================class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
