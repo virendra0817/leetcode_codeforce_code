@@ -1,0 +1,20 @@
+// ===================================================
+// Problem  : Pow(x, n)
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/powx-n/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 4 ms
+// Memory   : 19.5 MB
+// Date     : May 25, 2026
+// ===================================================class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        s=0
+        if n < 0 :
+            n= -1*n
+            s = (1/x)**(n)
+        else:
+            s = x**(n)
+        
+        return s
+             
