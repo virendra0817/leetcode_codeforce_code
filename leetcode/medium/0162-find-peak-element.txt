@@ -1,0 +1,15 @@
+// ===================================================
+// Problem  : Find Peak Element
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/find-peak-element/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.4 MB
+// Date     : May 26, 2026
+// ===================================================class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        t =max(nums)
+        for i in range(len(nums)):
+            if nums[i] == t:
+                return i
