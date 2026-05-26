@@ -1,0 +1,20 @@
+// ===================================================
+// Problem  : Count the Number of Special Characters I
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/count-the-number-of-special-characters-i/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.3 MB
+// Date     : May 26, 2026
+// ===================================================class Solution:
+    def numberOfSpecialChars(self, word: str) -> int:
+        a = word.lower()
+        t=0
+        s=set()
+        for i in a:
+            s.add(i)
+        for i in s:
+            if  i.upper() in word and i in word :
+                t+=1
+        return t
