@@ -1,0 +1,21 @@
+// ===================================================
+// Problem  : Reverse Integer
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/reverse-integer/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 49 ms
+// Memory   : 19.3 MB
+// Date     : May 27, 2026
+// ===================================================class Solution:
+    def reverse(self, x: int) -> int:
+        rev=0
+        sign=-1 if x<0 else 1
+        x=abs(x)
+        while(x!=0):
+            rev=rev*10+(x%10)
+            x//=10
+        result=sign*rev
+        if result<pow(-2,31) or result>pow(2,31)-1:
+            return 0
+        return result
