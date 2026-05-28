@@ -4,16 +4,16 @@
 // Link     : https://leetcode.com/problems/two-sum/
 // Difficulty: Easy
 // Language : python3
-// Runtime  : 3 ms
-// Memory   : 20.5 MB
-// Date     : May 27, 2026
+// Runtime  : 5389 ms
+// Memory   : 125.1 MB
+// Date     : May 28, 2026
 // ===================================================class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-       nummap = {}
-       n= len(nums)
-       for i in range(n):
-         comp = target - nums[i]
-         if comp in nummap:
-            return [nummap[comp],i]
-         nummap[nums[i]] =i
-       return []  
+        d={}
+        for i in range(0,len(nums)):
+            for j in range(i+1,len(nums)):
+                d[nums[i]+nums[j]] = [i,j]
+        
+        for j in d.keys():
+            if j == target :
+                return d[j]
