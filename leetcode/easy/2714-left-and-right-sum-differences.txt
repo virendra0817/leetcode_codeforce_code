@@ -1,0 +1,26 @@
+// ===================================================
+// Problem  : Left and Right Sum Differences
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/left-and-right-sum-differences/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 125 ms
+// Memory   : 19.5 MB
+// Date     : June 6, 2026
+// ===================================================class Solution:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        c1=[0]*n
+        c2 =[0]*n
+        for i in range(len(nums)):
+            if i-1 < 0: 
+                c1[i]= 0
+            else:
+                c1[i]= sum(nums[0:i])
+        for j in range(len(nums)):
+            if j+1 > len(nums) :
+                c2[j] = 0
+            else :
+                c2[j]  = sum(nums[j+1:]) 
+        diff = lambda c1, c2: [abs(c1[i] - c2[i]) for i in range(len(c1))]
+        return diff(c1,c2)
