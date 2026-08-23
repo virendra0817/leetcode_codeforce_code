@@ -1,0 +1,16 @@
+// ===================================================
+// Problem  : Add Digits
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/add-digits/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.1 MB
+// Date     : August 23, 2026
+// ===================================================class Solution:
+    def addDigits(self, num: int) -> int:
+      if num <10 :
+        return num
+      else:
+        return 1+ (num -1) %9
+
