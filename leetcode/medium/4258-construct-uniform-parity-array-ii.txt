@@ -1,0 +1,12 @@
+// ===================================================
+// Problem  : Construct Uniform Parity Array II
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/construct-uniform-parity-array-ii/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 13 ms
+// Memory   : 35.4 MB
+// Date     : September 3, 2026
+// ===================================================class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+        return min(nums1)%2==1 or sum(x&1 for x in nums1)==0
