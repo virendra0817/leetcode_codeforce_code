@@ -1,0 +1,19 @@
+// ===================================================
+// Problem  : Smallest Stable Index I
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/smallest-stable-index-i/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 7 ms
+// Memory   : 19.3 MB
+// Date     : September 4, 2026
+// ===================================================class Solution:
+    def firstStableIndex(self, nums: list[int], k: int) -> int:
+        n=len(nums)
+        for i in range (0,len(nums)):
+            l= max(nums[0:i+1])
+            m= min(nums[i:n])
+            if l-m <= k :
+                return i
+                break 
+        return -1
