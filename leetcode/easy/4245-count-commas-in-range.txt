@@ -1,0 +1,17 @@
+// ===================================================
+// Problem  : Count Commas in Range
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/count-commas-in-range/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.3 MB
+// Date     : September 9, 2026
+// ===================================================class Solution:
+    def countCommas(self, n: int) -> int:
+        t = str(n)
+        if len(t) < 4 :
+             return 0
+        else :
+            p = n- 1000
+            return p+1
