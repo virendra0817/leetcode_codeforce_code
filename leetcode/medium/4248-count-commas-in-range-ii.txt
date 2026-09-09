@@ -1,0 +1,17 @@
+// ===================================================
+// Problem  : Count Commas in Range II
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/count-commas-in-range-ii/
+// Difficulty: Medium
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19 MB
+// Date     : September 9, 2026
+// ===================================================class Solution:
+    def countCommas(self, n: int) -> int:
+        count , p = 0  ,1000
+
+        while p<=n :
+            count+=n-p+1
+            p*=1000
+        return count
