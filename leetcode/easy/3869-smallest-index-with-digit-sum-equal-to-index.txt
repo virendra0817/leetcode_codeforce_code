@@ -1,0 +1,21 @@
+// ===================================================
+// Problem  : Smallest Index With Digit Sum Equal to Index
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 0 ms
+// Memory   : 19.2 MB
+// Date     : September 24, 2026
+// ===================================================class Solution:
+    def smallestIndex(self, nums: List[int]) -> int:
+        for i, x in enumerate(nums):
+            digitSum=0
+            while x>0:
+                x, r=divmod(x, 10)
+                digitSum+=r
+            if digitSum==i: return i
+        return -1 
+
+
+        
