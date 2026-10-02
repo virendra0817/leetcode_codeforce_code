@@ -1,0 +1,29 @@
+// ===================================================
+// Problem  : Valid Parentheses
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/valid-parentheses/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 15 ms
+// Memory   : 19.3 MB
+// Date     : October 2, 2026
+// ===================================================class Solution:
+    def isValid(self, s: str) -> bool:
+      if len(s) <=1:
+           return False
+      begin_parentheses = {
+           '{': '}',
+           '(': ')',
+           '[': ']'
+       }
+      next_to_close = []
+      for ptheses in s:
+           end_parethese = begin_parentheses.get(ptheses, None)
+           if next_to_close and not end_parethese:
+               next_to_check = next_to_close.pop(0)
+               if ptheses != next_to_check:
+                   return False
+               continue
+           next_to_close.insert(0,end_parethese)
+      return not next_to_close
+            
