@@ -1,0 +1,23 @@
+// ===================================================
+// Problem  : Subarrays Distinct Element Sum of Squares I
+// Platform : Leetcode
+// Link     : https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/
+// Difficulty: Easy
+// Language : python3
+// Runtime  : 21 ms
+// Memory   : 19.3 MB
+// Date     : October 18, 2026
+// ===================================================class Solution:
+    def sumCounts(self, nums: List[int]) -> int:
+        n = len(nums)
+        res = 0
+
+        for i in range(n):
+            st = set()
+
+            for j in range(i, n):
+                st.add(nums[j])
+                m = len(st)
+                res += m * m
+
+        return res
